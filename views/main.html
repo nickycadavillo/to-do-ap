@@ -1,6 +1,5 @@
 <div ng-controller = "todoController">
-{{message}}
-
+  {{message}}
   <header>
     <p>hello</p>
     <h1>Nicky</h1>
@@ -10,18 +9,18 @@
     <h2>What are your goals for today?</h2>
   </section>
 
-  <section class = "todos">
-    <input type = "checkbox" ng-model = "doneDidIt"/>
-    <label ng-hide = "editing" class = "todo-label">{{thingToDo}}</label>
-    <input ng-show = "editing" ng-model = "thingToDo" class = "todo-input" type="text"/>
-  </section>
+  <div ng-repeat = "todo in todos">
+    <section class = "all-todos">
+      <input type = "checkbox" ng-model = "iDontDidIt"/>
+      <label ng-hide = "editing" class = "todo-label">{{todo.todo}}</label>
+      <input ng-show = "editing" ng-model = "todo.todo" class = "todo-input" type="text"/>
+    </section>
+  </div>
 
-  <section class = "buttons">
-    <a href="" ng-click = "editing =! editing">edit</a>
-    <a href ="" ng-click = "todos()">save</a>
-    <a href ="" class="delete">delete</a>
-  </section>
-
+    <section class = "buttons">
+      <a href="" ng-click = "editing =! editing">edit</a>
+      <a href ="" class="delete">delete</a>
+    </section>
 
 
 

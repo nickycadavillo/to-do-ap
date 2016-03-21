@@ -1,17 +1,18 @@
 $font-color: white;
-$font: 'Quattrocento', serif;
+$header-font: 'Quattrocento', serif;
+$todo-font: 'Questrial', sans-serif;
 
 html {
-  font-family: $font;
   font-size: 1em;
 }
 
 body {
   background-image: url("https://images.unsplash.com/photo-1445346366695-5bf62de05412?crop=entropy&fit=crop&fm=jpg&h=650&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375");
-  -webkit-background-size: cover;
+  // -webkit-background-size: cover;
 }
 
 header{
+  font-family: $header-font;
   margin-top: 5%;
   color: rgb(52, 73, 94);
   text-align: center;
@@ -27,19 +28,36 @@ header{
 
   h1{
     margin-top: 0;
-    font-size: 5em;
+    font-size: 3em;
   }
 }
 
-section{
+h2{
+  font-family: $header-font;
+  text-align: center;
+  color: white;
+}
+
+.all-todos{
   text-align: center;
   color: white;
 
+  .todo-label {
+    font-family: $todo-font;
+    font-size: 1.2em;
+  }
+
   .todo-input {
+    font-family: $todo-font;
     color: rgb(52, 73, 94);
   }
 }
 
-a {
-  color: white;
+.buttons {
+  text-align: center;
+
+  a{
+    font-family: $todo-font;
+    color: white;
+  }
 }
