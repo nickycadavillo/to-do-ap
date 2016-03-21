@@ -1,0 +1,28 @@
+<div ng-controller = "todoController">
+{{message}}
+
+  <header>
+    <p>hello</p>
+    <h1>Nicky</h1>
+  </header>
+
+  <section class = "goal">
+    <h2>What are your goals for today?</h2>
+  </section>
+
+  <section class = "todos">
+    <input type = "checkbox" ng-model = "doneDidIt"/>
+    <label ng-hide = "editing" class = "todo-label">{{thingToDo}}</label>
+    <input ng-show = "editing" ng-model = "thingToDo" class = "todo-input" type="text"/>
+  </section>
+
+  <section class = "buttons">
+    <a href="" ng-click = "editing =! editing">edit</a>
+    <a href ="" ng-click = "todos()">save</a>
+    <a href ="" class="delete">delete</a>
+  </section>
+
+
+
+
+</div>
